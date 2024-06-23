@@ -73,12 +73,11 @@ function filterOutOdds() {
 
 //  Refactor it to use the rest operator & an arrow function:
 /* Write an ES2015 Version */
+const filterOutOddsUpdate = (...nums) => nums.filter(num => num % 2 === 0);
 
 // #2 Write a function called findMin that accepts a variable number of arguments and returns the smallest argument.
 
-function findMin() {
-
-}
+const findMin = (...nums) => Math.min(...nums);
 
 findMin(1, 4, 12, -3) // -3
 findMin(1, -1) // -1
