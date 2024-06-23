@@ -81,7 +81,7 @@ const findMin = (...nums) => Math.min(...nums);
 
 findMin(1, 4, 12, -3) // -3
 findMin(1, -1) // -1
-findMin(3, 1) // 1
+findMin(3, 1) // 1 
 
 
 // #3 mergeObjects - Write a function called "mergeObjects" that accepts two objects and returns a new object which contains all the keys and values of the first object and second object.
