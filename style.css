@@ -1,0 +1,13 @@
+/* Some small Changes */
+ul {
+    font-size: 1.75rem;
+}
+
+ol {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+img {
+    width: 40%;
+}
