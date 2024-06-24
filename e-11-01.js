@@ -247,3 +247,9 @@ const s = createAnimal("sheep", "bleet", "BAAAAaaaa")
 // {species: "sheep", bleet: ƒ}
 s.bleet() //"BAAAAaaaa"
 
+//////////////////////////////////////////
+//                                      //
+// Exercise 05 - Destructuring          //
+//                                      //
+//////////////////////////////////////////
+
