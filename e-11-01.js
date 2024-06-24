@@ -169,8 +169,14 @@ function createInstructor(firstName, lastName) {
 }
 
 /* Write an ES2015 Version */
+function createInstructor2(firstName, lastName) {
+    return {
+        firstName,
+        lastName
+    }
+}
 
-//   #2
+//   #2 Computed Property Names
 var favoriteNumber = 42;
 
 var instructor = {
@@ -180,6 +186,14 @@ var instructor = {
 instructor[favoriteNumber] = "That is my favorite!"
 
 /* Write an ES2015 Version */
+var favoriteNumber2 = 42;
+
+var instructorUpdate = {
+    firstName: "Colt",
+    [favoriteNumber]: "That is my favorite!"
+}
+
+
 
 // #3 Object Methods
 var instructor = {
@@ -193,6 +207,15 @@ var instructor = {
 }
 
 /* Write an ES2015 Version */
+var instructorUpdate = {
+    firstName: "Colt",
+    sayHi() {
+        return "Hi!";
+    },
+    sayBye() {
+        return this.firstName + " says bye!";
+    }
+}
 
 // #4 createAnimal function
 /** Write a function which generates an animal object. The function should accepts 3 arguments:
@@ -202,6 +225,19 @@ var instructor = {
 - noise: a string to be printed when above function is called (‘woof’, ‘baaa’)
 
 Use one or more of the object enhancements we’ve covered. */
+/* Write an ES2015 Version */
+function createAnimal(species, verb, noise) {
+    return {
+        species,
+        [noise]: verb,
+        [verb]() {
+            return noise;
+        },
+        makeNoise() {
+            return `I make a ${noise} sound`;
+        }
+    }
+}
 
 const d = createAnimal("dog", "bark", "Woooof!")
 // {species: "dog", bark: ƒ}
@@ -211,4 +247,3 @@ const s = createAnimal("sheep", "bleet", "BAAAAaaaa")
 // {species: "sheep", bleet: ƒ}
 s.bleet() //"BAAAAaaaa"
 
-/* Write an ES2015 Version */
