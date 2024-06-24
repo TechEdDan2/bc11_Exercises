@@ -154,7 +154,7 @@ const update = (obj, key, val) => {
 
 //////////////////////////////////////////
 //                                      //
-// Exercise 03 - Object Enhancements    //
+// Exercise 04 - Object Enhancements    //
 //                                      //
 //////////////////////////////////////////
 
