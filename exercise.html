@@ -117,6 +117,23 @@
         </ol>
     </ul>
 
+    <h2>Exercise 06</h2>
+
+    <p>In this exercise, you’ll answer questions and refactor some ES5 code into ES2015 using Maps and Sets. See the
+        console for code.</p>
+
+    <h3>Three Quick Questions - What does the following code return or do?</h3>
+    <ol>
+        <li>new Set([1,1,2,2,3,4]) // returns 1,2,3,4</li>
+        <li>[...new Set("referee")].join("") // using the spread operator, it returns an array that has been filtered to
+            have no duplicates and then is joined using no space separator, so the String referee now is <b>ref</b>
+        </li>
+        <li>let m = new Map(); <br> m.set([1,2,3], true); <br> m.set([1,2,3], false); </li>
+        <ul>
+            <li>m will have the following 0: {Array(3): true} <br> 1: {Array(3): false} </li>
+        </ul>
+    </ol>
+
 </body>
 <script src="e-11-01.js"></script>
 
