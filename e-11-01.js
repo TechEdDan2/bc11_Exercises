@@ -332,3 +332,38 @@ raceResults(['Tom', 'Margaret', 'Allison', 'David', 'Pierre'])
     rest: ["David", "Pierre"]
   }
 */
+
+//////////////////////////////////////////
+//                                      //
+// Exercise 06 - Maps and Sets          //
+//                                      //
+//////////////////////////////////////////
+
+// #1 Has Duplicates Challenge - Write a function called hasDuplicate which accepts an array and returns true or false if that array contains a duplicate
+
+const hasDuplicate = arr => [...new Set(arr)].length !== arr.length;
+
+hasDuplicate([1, 3, 2, 1]) // true
+hasDuplicate([1, 5, -1, 4]) // false
+
+// #2 Vowel Count challenge - Write a function called vowelCount which accepts a string and returns a map where the keys are numbers and the values are the count of the vowels in the string. 
+
+const vowelCount = (str) => {
+    const vMap = new Map();
+    const vowels = 'aeiou';
+
+    for (let ltr of str) {
+        let lowerLtr = ltr.toLowerCase();
+        if ('aeiou'.includes(lowerLtr)) {
+            if (vMap.has(lowerLtr)) {
+                vMap.set(lowerLtr, vMap.get(lowerLtr) + 1);
+            } else {
+                vMap.set(lowerLtr, 1);
+            }
+        }
+    }
+    return vMap;
+};
+
+vowelCount('awesome') // Map { 'a' => 1, 'e' => 2, 'o' => 1 }
+vowelCount('Colt') // Map { 'o' => 1 }
