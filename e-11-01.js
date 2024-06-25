@@ -264,26 +264,35 @@ s.bleet() //"BAAAAaaaa"
 /** ------------------------------------------------------------------------------- */
 
 // # 1 - ES5 Assigning Variables to Object Properties
+// var obj = {
+//     numbers: {
+//         a: 1,
+//         b: 2
+//     }
+// };
+
+// var a = obj.numbers.a;
+// var b = obj.numbers.b;
+
+/* Write an ES2015 Version */
 var obj = {
     numbers: {
         a: 1,
         b: 2
     }
 };
-
-var a = obj.numbers.a;
-var b = obj.numbers.b;
-
-/* Write an ES2015 Version */
+let { numbers: { a, b } } = obj;
 
 // # 2 - ES5 Array Swap
 
-var arr = [1, 2];
-var temp = arr[0];
-arr[0] = arr[1];
-arr[1] = temp;
+// var arr = [1, 2];
+// var temp = arr[0];
+// arr[0] = arr[1];
+// arr[1] = temp;
 
 /* Write an ES2015 Version */
+var arr = [1, 2];
+[arr[0], arr[1]] = [arr[1], arr[0]]
 
 // # 3 - ## **raceResults()**
 
@@ -299,6 +308,19 @@ arr[1] = temp;
 // - An arrow function
 // - Destructuring
 // - `Enhanced` object assignment (same key/value shortcut)
+
+// Standard Function 
+// function raceResults([first, second, third, ...rest]) {
+//     return {
+//         first,
+//         second,
+//         third,
+//         rest: [...rest]
+//     }
+// }
+
+
+const raceResults = ([first, second, third, ...rest]) => ({ first, second, third, rest });
 
 raceResults(['Tom', 'Margaret', 'Allison', 'David', 'Pierre'])
 
